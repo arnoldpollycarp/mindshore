@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink antialiased font-sans;
+  }
+  ::selection {
+    background: #c2410c;
+    color: #f4efe6;
+  }
+}
+
+@layer utilities {
+  .page-active {
+    animation: pageIn 0.4s ease both;
+  }
+  @keyframes pageIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
